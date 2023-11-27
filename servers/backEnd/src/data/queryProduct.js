@@ -11,13 +11,13 @@ module.exports = {
     },
 
     async update_product(object, id) {
-        await knex("produtos").update({ 
+        await knex("produtos").update({
             descricao: object.descricao,
             quantidade_estoque: object.quantidade_estoque,
             valor: object.valor,
             categoria_id: object.categoria_id,
-         }).where({ id });
-        
+        }).where({ id });
+
     },
 
     async upload_product_photo(id, photoUrl) {

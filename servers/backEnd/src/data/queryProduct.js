@@ -1,12 +1,13 @@
 const knex = require('../config/connection');
 
 module.exports = {
-    async register_product(object) {
+    async register_product(object, id) {
         return await knex("produtos").insert({
             descricao: object.descricao,
             quantidade_estoque: object.quantidade_estoque,
             valor: object.valor,
             categoria_id: object.categoria_id,
+            usuario_id: id
         }).returning('*');
     },
 
@@ -28,8 +29,8 @@ module.exports = {
         return await knex('produtos').orderBy('id', "asc");
     },
 
-    async get_product_by_category_id(categoria_id) {
-        return await knex('produtos').where({ categoria_id }).orderBy('id', "asc")
+    async get_product_by_category_id(usuario_id) {
+        return await knex('produtos').where({ usuario_id }).orderBy('id', "asc")
     },
 
     async get_product_by_id(id) {

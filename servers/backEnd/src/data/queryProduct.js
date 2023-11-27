@@ -38,6 +38,6 @@ module.exports = {
     },
 
     async delete_product(id) {
-        await knex.delete('*').from('produtos').where({ id });
+        await knex('produtos').delete().where({ id });
     }
 }

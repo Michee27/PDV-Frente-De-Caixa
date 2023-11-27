@@ -57,6 +57,12 @@ const listProduct = async (req, res) => {
             products = await product.get_product_by_category_id(usuario_id);
         }
 
+        if (products.length === 0) {
+            return res.status(400).json({
+                message: "Usuario não existe"
+            })
+        }
+
         return res.status(200).json(products)
     } catch (error) {
         return res.status(509).json({
@@ -106,6 +112,7 @@ const updateProduct = async (req, res) => {
 
 const detailProducts = async (req, res) => {
     const id = req.params.id;
+
     try {
         const products = await product.get_product_by_id(id);
 
@@ -119,10 +126,11 @@ const detailProducts = async (req, res) => {
 
 const deleteProducts = async (req, res) => {
     const id = req.params.id;
+
     try {
         const { produto_imagem: path } = await product.get_product_by_id(id);
 
-        await photoBucket.deleteFile(path);
+        //await photoBucket.deleteFile(path);
 
         await product.delete_product(id);
 

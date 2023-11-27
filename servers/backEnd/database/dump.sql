@@ -1,3 +1,4 @@
+
 CREATE DATABASE pdv;
 
 CREATE TABLE usuarios (
@@ -17,7 +18,8 @@ CREATE TABLE produtos (
     descricao text not null,
     quantidade_estoque int,
     valor int not null,
-    categoria_id integer references categorias(id)
+    categoria_id integer references categorias(id),
+  	usuario_id integer references usuarios(id)
 );
 
 CREATE TABLE clientes(
@@ -51,10 +53,6 @@ CREATE TABLE pedido_produtos (
 
 ALTER TABLE produtos
 ADD produto_imagem text;
-
-
-
-
 
 INSERT INTO categorias(descricao)
 values

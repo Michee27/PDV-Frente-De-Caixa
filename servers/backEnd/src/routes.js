@@ -39,14 +39,14 @@ routes.put('/usuario', validateBody(userUpdate), checkEmailtoUpdate, updateUser)
 routes.get('/usuario', getUser)
 
 //routes clients
-routes.post('/cliente', validateBody(clientRegister) ,addClients)
+routes.post('/cliente', validateBody(clientRegister), addClients)
 routes.get('/cliente', listClients)
 routes.put('/cliente/:id', validateBody(clientRegister), editClient)
 routes.get('/cliente/:id', getClientDetails)
 
 //routes products
 routes.post('/produto', multer.single("imagem"), validateBody(productRegister), registerProduct)
-routes.put('/produto/:id', multer.single("imagem"),validateProducts, validateBody(productRegister), updateProduct)
+routes.put('/produto/:id', multer.single("imagem"), validateProducts, validateBody(productRegister), updateProduct)
 routes.get('/produto', listProduct)
 
 routes.get('/produto/:id', validateProducts, detailProducts)

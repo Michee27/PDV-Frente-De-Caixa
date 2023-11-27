@@ -5,6 +5,7 @@ const photoBucket = require('../utils/photoBubket');
 const registerProduct = async (req, res) => {
     const { descricao, valor, quantidade_estoque, categoria_id } = req.body;
     const file = req.file
+    const id = req.userID
 
     try {
 
@@ -21,7 +22,7 @@ const registerProduct = async (req, res) => {
             categoria_id,
         }
 
-        const produto = await product.register_product(productObject);
+        const produto = await product.register_product(productObject, id);
 
         if (file) {
 
@@ -46,14 +47,14 @@ const registerProduct = async (req, res) => {
 }
 
 const listProduct = async (req, res) => {
-    const { categoria_id } = req.query
+    const { usuario_id } = req.query
 
     try {
 
         let products = await product.get_product()
 
-        if (categoria_id) {
-            products = await product.get_product_by_category_id(categoria_id);
+        if (usuario_id) {
+            products = await product.get_product_by_category_id(usuario_id);
         }
 
         return res.status(200).json(products)

@@ -22,13 +22,13 @@ const registerProduct = async (req, res) => {
         }
 
         const produto = await product.register_product(productObject);
-        
+
         if (file) {
 
             const id = produto[0].id
 
             const path = `produtos/${file.originalname}`
-    
+
             const photo = await photoBucket.uploadFile(path, file.buffer, file.mimetype)
 
             await product.upload_product_photo(id, photo.path);
@@ -54,7 +54,7 @@ const listProduct = async (req, res) => {
 
         if (categoria_id) {
             products = await product.get_product_by_category_id(categoria_id);
-        } 
+        }
 
         return res.status(200).json(products)
     } catch (error) {
@@ -69,7 +69,7 @@ const updateProduct = async (req, res) => {
     const { descricao, valor, quantidade_estoque, categoria_id } = req.body;
     const file = req.file;
     const id = req.params.id;
-  
+
     try {
         const productObject = {
             descricao,
@@ -77,17 +77,17 @@ const updateProduct = async (req, res) => {
             quantidade_estoque,
             categoria_id
         }
-       
+
         await product.update_product(productObject, id);
-    
+
         if (file) {
-           
+
             let { produto_imagem: path } = await product.get_product_by_id(id)
-          
+
             await photoBucket.deleteFile(path);
 
             path = `produtos/${file.originalname}`
-            
+
             const photo = await photoBucket.uploadFile(path, file.buffer, file.mimetype)
 
             await product.upload_product_photo(id, photo.path);

@@ -130,7 +130,7 @@ const deleteProducts = async (req, res) => {
     try {
         const { produto_imagem: path } = await product.get_product_by_id(id);
 
-        //await photoBucket.deleteFile(path);
+        await photoBucket.deleteFile(path);
 
         await product.delete_product(id);
 

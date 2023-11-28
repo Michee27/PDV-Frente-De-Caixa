@@ -33,7 +33,7 @@ const addClients = async (req, res) => {
 
 const listClients = async (req, res) => {
     try {
-        const clientes = client.get_clients()
+        const clientes = await client.get_clients()
         return res.status(200).json(clientes)
     } catch (error) {
         return res.status(500).json({ message: error.message })
@@ -58,7 +58,7 @@ const editClient = async (req, res) => {
 
         const existe_cpf = await client.get_client_by_cpf(cpf);
 
-        if (existe_cpf && existe_cpf.id !== id) {
+        if (existe_cpf.length > 0 && existe_cpf.id !== id) {
             return res.status(400).json({ message: 'Já existe uma conta com o cpf informado' })
         }
 

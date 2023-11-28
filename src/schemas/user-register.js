@@ -3,7 +3,7 @@ const joi = require('joi')
 module.exports = joi.object({
     nome: joi.string().min(3).required().messages({
         "string.empty": "Nome não pode ser vazio",
-        "any.required": "Senha é obrigatória",
+        "any.required": "Nome é obrigatória",
         "string.min": "o nome deve ter pelo menos 3 caracteres"
     }),
     email: joi.string().email().required().messages({

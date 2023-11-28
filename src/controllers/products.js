@@ -101,7 +101,6 @@ const updateProduct = async (req, res) => {
 
             productObject.produto_imagem = photo.url
         }
-
         return res.status(201).json(productObject)
     } catch (error) {
         return res.status(509).json({

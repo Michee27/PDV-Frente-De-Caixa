@@ -1,4 +1,4 @@
-## Desafio Modulo V - Sistema PDV
+## Sistema PDV
 
 ### Introdução
 Seja bem vindo ao sistema de ponto de venda (PDV)
@@ -6,14 +6,8 @@ Seja bem vindo ao sistema de ponto de venda (PDV)
 Um sistema de PDV (Ponto de Venda) é uma ferramenta de software essencial para estabelecimentos comerciais. Ele permite o registro de vendas, aceita diferentes formas de pagamento, emite recibos e gerencia o estoque. Além disso, fornece relatórios detalhados de vendas e pode se integrar a outras ferramentas de negócios.
 ___________________
 
-### Primeira Sprint:
-
-Nessa primeira sprint foi implementado o banco de dados e foi criado e alguns endpoints para o PDV.
-
-Inicialmente foi implementado o cadastro de usuários, login com email e senha e atualização do perfil do usuário.
-
 ## Uso básico
-API funciona na URL: http://localhost:3000 e pelos links do - [Frontend](https://frentedeloja.netlify.app/) ou no link [Backend](https://backendfrentedeloja.onrender.com/login). Antes de iniciar é necessário fazer o clone do repositório, baixar as dependências e por fim configurar um arquivo .env no diretorio raiz do projeto conforme o exemplo abaixo:
+API funciona na URL: http://localhost:3000 ou no link [Backend](https://pdv-26iz.onrender.com). Antes de iniciar é necessário fazer o clone do repositório, baixar as dependências e por fim configurar um arquivo .env no diretorio raiz do projeto conforme o exemplo abaixo, ou pde usar a insomnia para testar os endpoint pelo link [https://pdv-26iz.onrender.com](https://pdv-26iz.onrender.com)
 
 ````
 git clone https://github.com/exemplo-backend/exemplo-backend-git
@@ -46,11 +40,6 @@ JWT_PASS=
 `POST` `/login` - Login com email e senha
 
 `PUT` `/usuario` - Atualiza o perfil do usuário
-
-### Segunda Sprint:
-
-Nessa segunda sprint foi implementado mais algumas rotas para o PDV e também às tabelas produtos e clientes com a intenção de cadastrar produtos e clientes e manter o sitema funcionando corretamente, segue abaixo as rotas:
-
 
 `POST` `/produto` - Cadastra um novo produto
 
@@ -100,5 +89,5 @@ Essas rotas foram implementadas com o objetivo de melhorar a qualidade do sistem
 
 ### Video
 
-[See endpoint testing video](https://clipchamp.com/watch/Mk9FTG24WYd)
+[Veja testes dos endponits](https://clipchamp.com/watch/Mk9FTG24WYd)
 

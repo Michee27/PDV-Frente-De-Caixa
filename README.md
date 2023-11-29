@@ -97,3 +97,8 @@ Essas rotas foram implementadas com o objetivo de melhorar a qualidade do sistem
 * **Addhyel Martins** - *Projeto PDV* - [Addmartins](https://github.com/Addmartins)
 * **Michée Celestin** - *Projeto PDV* - [Michee27](https://github.com/Michee27)
 * **Cauã Xavier** - *Projeto PDV* - [Cauaxavier](https://github.com/Cauaxavier)
+
+### Video
+
+[See endpoint testing video](https://clipchamp.com/watch/Mk9FTG24WYd)
+

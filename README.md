@@ -79,14 +79,6 @@ Essas rotas foram implementadas com o objetivo de melhorar a qualidade do sistem
 
 - [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/)
 
-### Autores
-
-* **Augusto Izepon** - *Projeto PDV* - [augustoizepon](https://github.com/augustoizepon)
-* **Daniel Hermes** - *Projeto PDV* - [HermesdMatos](https://github.com/HermesdMatos)
-* **Addhyel Martins** - *Projeto PDV* - [Addmartins](https://github.com/Addmartins)
-* **Michée Celestin** - *Projeto PDV* - [Michee27](https://github.com/Michee27)
-* **Cauã Xavier** - *Projeto PDV* - [Cauaxavier](https://github.com/Cauaxavier)
-
 ### Video
 
 [Veja testes dos endponits](https://clipchamp.com/watch/Mk9FTG24WYd)

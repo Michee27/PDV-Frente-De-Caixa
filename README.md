@@ -83,6 +83,10 @@ Essas rotas foram implementadas com o objetivo de melhorar a qualidade do sistem
 
 [Veja testes dos endponits](https://clipchamp.com/watch/Mk9FTG24WYd)
 
+### Ideias
 Este projeto ainda está em desenvolvimento para fins de melhoria constante e aceitamos sugestões de melhoria. Sinta-se livre para nos contatar
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/micheecelestin/)
+[![whatsaap](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5547997768422)
 
 

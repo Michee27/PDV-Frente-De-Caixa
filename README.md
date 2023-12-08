@@ -83,3 +83,6 @@ Essas rotas foram implementadas com o objetivo de melhorar a qualidade do sistem
 
 [Veja testes dos endponits](https://clipchamp.com/watch/Mk9FTG24WYd)
 
+Este projeto ainda está em desenvolvimento para fins de melhoria constante e aceitamos sugestões de melhoria. Sinta-se livre para nos contatar
+
+
